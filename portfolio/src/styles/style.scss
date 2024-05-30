@@ -1,29 +1,112 @@
 @import "variables";
 @import "mixins";
 
-// for header
-.header {
-  @include row_flex(space-between);
-  padding: 0 20px;
-  background-color: $dark_black;
-  .h-title {
-    color: $white;
-  }
-  .h-links {
-    @include row_flex(center);
-    color: $white;
-    list-style: none;
-    gap: 20px;
-    .h-link {
-      cursor: pointer;
-      transition: 1.5s;
-      padding: 5px 10px;
-      border-radius: 10px;
-      border: none;
-      font-weight: bold;
-      &:hover {
-        color: $purple;
+.app {
+  color: $white;
+  // for header
+
+  // for home section
+  .home {
+    @include col_flex(space-between);
+    background-color: $dark_black;
+    height: 100vh;
+    padding: 0 70px;
+    // for header
+    .header {
+      width: 100%;
+      @include row_flex(space-between);
+      background-color: $dark_black;
+      .h-title {
+      }
+      .h-links {
+        @include row_flex(center);
+        list-style: none;
+        gap: 20px;
+        .h-link {
+          cursor: pointer;
+          transition: 1.5s;
+          padding: 5px 10px;
+          border-radius: 10px;
+          border: none;
+          font-weight: bold;
+          &:hover {
+            color: $purple;
+          }
+        }
       }
     }
+
+    // for home content
+    .home-content {
+      flex: 1;
+      width: 100%;
+      @include row_flex(space-between);
+      .h-details {
+        .h-social-links {
+          .social-link {
+            color: inherit;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 20px 0 0;
+          }
+        }
+        .h-buttons {
+          margin-top: 16px;
+          .cv-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: $purple;
+            cursor: pointer;
+            margin-right: 20px;
+            font-weight: bold;
+          }
+          .hire-btn {
+            @extend .cv-btn;
+            margin-left: 20;
+          }
+        }
+      }
+
+      .h-dp-section {
+        .h-dp-holder {
+          .h-dp {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  //   for about section
+  .about {
+    background-color: $light_black;
+    height: 100vh;
+  }
+
+  //   for services
+  .services {
+    background-color: $dark_black;
+    height: 100vh;
+  }
+
+  //   for portfolio section
+  .portfolio {
+    background-color: $light_black;
+    height: 100vh;
+  }
+
+  //for contacts
+  .contact {
+    background-color: $dark_black;
+    height: 100vh;
+  }
+
+  //   for footer
+  .footer {
+    background-color: $light_black;
+    padding: 100px;
   }
 }

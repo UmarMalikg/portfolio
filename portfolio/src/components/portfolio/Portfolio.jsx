@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return (
+    <div id="portfolio" className="portfolio">
+      Portfolio
+    </div>
+  );
 };

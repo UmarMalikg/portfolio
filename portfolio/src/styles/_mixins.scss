@@ -3,3 +3,10 @@
   align-items: center;
   justify-content: $justify;
 }
+
+@mixin col_flex($justify) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: $justify;
+}

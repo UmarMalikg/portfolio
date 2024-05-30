@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/style.scss";
 import { HLink } from "./components/HLink";
 
 export const Header = () => {
@@ -7,11 +6,11 @@ export const Header = () => {
     <div className="header">
       <h3 className="h-title">Portfolio</h3>
       <ul className="h-links">
-        <HLink text="Home" link="#" />
-        <HLink text="About" link="#" />
-        <HLink text="Services" link="#" />
-        <HLink text="Portfolio" link="#" />
-        <HLink text="Contact" link="#" />
+        <HLink text="Home" link="home" />
+        <HLink text="About" link="about" />
+        <HLink text="Services" link="services" />
+        <HLink text="Portfolio" link="portfolio" />
+        <HLink text="Contact" link="contact" />
       </ul>
     </div>
   );
