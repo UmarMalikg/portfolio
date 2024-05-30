@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+// for header
+.header {
+  @include row_flex(space-between);
+  padding: 0 20px;
+  background-color: $dark_black;
+  .h-title {
+    color: $white;
+  }
+  .h-links {
+    @include row_flex(center);
+    color: $white;
+    list-style: none;
+    gap: 20px;
+    .h-link {
+      cursor: pointer;
+      transition: 1.5s;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: none;
+      font-weight: bold;
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+}
