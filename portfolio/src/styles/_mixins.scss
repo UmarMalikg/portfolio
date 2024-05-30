@@ -10,3 +10,12 @@
   flex-direction: column;
   justify-content: $justify;
 }
+
+@mixin btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: $purple;
+  cursor: pointer;
+  font-weight: bold;
+}

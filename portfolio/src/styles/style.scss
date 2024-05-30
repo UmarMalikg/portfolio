@@ -41,6 +41,7 @@
       flex: 1;
       width: 100%;
       @include row_flex(space-between);
+      // flex-wrap: wrap;
       .h-details {
         .h-social-links {
           .social-link {
@@ -53,16 +54,11 @@
         .h-buttons {
           margin-top: 16px;
           .cv-btn {
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: none;
-            background-color: $purple;
-            cursor: pointer;
+            @include btn;
             margin-right: 20px;
-            font-weight: bold;
           }
           .hire-btn {
-            @extend .cv-btn;
+            @include btn;
             margin-left: 20;
           }
         }
@@ -84,6 +80,30 @@
   .about {
     background-color: $light_black;
     height: 100vh;
+    @include row_flex(start);
+    padding: 0 70px;
+    .a-dp-section {
+      .a-dp-holder {
+        .a-dp {
+          height: 300px;
+          width: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .a-details-section {
+      flex-direction: 1;
+      margin-left: 50px;
+      .a-title {
+        span {
+          color: $purple;
+        }
+      }
+      .a-read-more-btn {
+        @include btn;
+      }
+    }
   }
 
   //   for services
