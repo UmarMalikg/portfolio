@@ -1,6 +1,11 @@
 @import "variables";
 @import "mixins";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .app {
   color: $white;
   // for header
@@ -14,6 +19,7 @@
     // for header
     .header {
       width: 100%;
+      padding-top: 30px;
       @include row_flex(space-between);
       background-color: $dark_black;
       .h-title {
@@ -110,6 +116,38 @@
   .services {
     background-color: $dark_black;
     height: 100vh;
+    .s-title {
+      text-align: center;
+      padding-top: 20px;
+      span {
+        color: $purple;
+      }
+    }
+
+    .all-services {
+      flex: 1;
+      .service {
+        padding: 0 30px;
+        height: 300px;
+        margin: 100px 50px;
+        text-align: center;
+        background-color: $light_black;
+        .service-icon {
+          color: $purple;
+          font-size: 40px;
+          font-weight: bold;
+          padding: 20px 0 10px 0;
+        }
+        h2 {
+        }
+        p {
+          margin: 30px 0;
+        }
+        button {
+          @include btn;
+        }
+      }
+    }
   }
 
   //   for portfolio section
