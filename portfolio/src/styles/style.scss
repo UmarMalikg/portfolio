@@ -220,6 +220,51 @@
   .contact {
     background-color: $dark_black;
     height: 100vh;
+    .c-title {
+      text-align: center;
+      padding-top: 20px;
+      span {
+        color: $purple;
+      }
+    }
+    .c-form-holder {
+      @include row_flex(center);
+      form {
+        width: auto;
+        @include col_flex(center);
+        gap: 20px;
+        margin-top: 30px;
+        padding: 0 20px;
+        .f-row {
+          width: 100%;
+          gap: 20px;
+          @include row_flex(space-between);
+          flex-wrap: wrap;
+          input {
+            background-color: $light_black;
+            padding: 8px;
+            width: 47%;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            color: $white;
+          }
+          textarea {
+            @extend input;
+            width: 100%;
+            height: 300px;
+            resize: none;
+          }
+        }
+        .b-f-row {
+          @extend .f-row;
+          @include row_flex(center);
+          button {
+            @include btn;
+          }
+        }
+      }
+    }
   }
 
   //   for footer
