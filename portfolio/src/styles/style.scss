@@ -153,7 +153,67 @@
   //   for portfolio section
   .portfolio {
     background-color: $light_black;
-    height: 100vh;
+    min-height: 100vh;
+    .p-title {
+      text-align: center;
+      padding-top: 20px;
+      span {
+        color: $purple;
+      }
+    }
+    .all-projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 50px;
+      .s-project {
+        position: relative;
+        height: 250px;
+        width: auto;
+        background-color: $dark_black;
+        text-decoration: none;
+        overflow: hidden;
+        .p-img-holder {
+          height: 100%;
+          width: 100%;
+          transition: 1s;
+          .p-img {
+            @extend .p-img-holder;
+            // object-fit: contain;
+          }
+        }
+        .p-hover {
+          position: absolute;
+          bottom: -100%; /* Start hidden below */
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          background-color: rgba(
+            0,
+            0,
+            0,
+            0.7
+          ); /* Semi-transparent background */
+          color: $white;
+          transition: bottom 1s;
+        }
+
+        &:hover {
+          .p-img-holder {
+            display: none;
+          }
+          .p-hover {
+            bottom: 0;
+            color: $white;
+          }
+        }
+      }
+    }
   }
 
   //for contacts
