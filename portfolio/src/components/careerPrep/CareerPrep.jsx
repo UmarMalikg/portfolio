@@ -58,6 +58,7 @@ export const CareerPrep = () => {
             icon={<FontAwesomeIcon icon={faApple} />}
             title="JavaScript"
             description="Learn JavaScript Concepts with us to crack the top tech interviews"
+            link={`interview/js.html`}
           />
           <CareerSub
             icon={<FontAwesomeIcon icon={faApple} />}

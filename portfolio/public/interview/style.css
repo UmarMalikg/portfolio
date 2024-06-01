@@ -14,7 +14,7 @@ sidebar {
   padding: 20px;
 }
 .qul {
-  list-style: none;
+  margin-left: 10px;
 }
 .q {
   color: white;
@@ -32,8 +32,33 @@ answers {
   right: 0;
   margin: 20px;
   padding: 20px;
+  overflow: auto;
 }
 .answer {
-  display: none; /* Hide answers by default */
+  display: none;
   margin-top: 10px;
+}
+.answer ul {
+  list-style: inherit;
+}
+
+/* common stylign */
+.bb1px {
+  border: 1px solid black;
+}
+ul ul {
+  margin-left: 30px;
+  list-style-type: circle !important;
+}
+ul ul ul {
+  margin-left: 60px;
+  list-style-type: square !important;
+}
+ul ul ul ul {
+  margin-left: 90px;
+  list-style-type: disc !important;
+}
+pre {
+  background-color: black;
+  color: white;
 }

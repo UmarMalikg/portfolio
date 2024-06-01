@@ -5,26 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Careers--OOP</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Add some basic styling for visibility */
-      .answer {
-        display: none; /* Hide answers by default */
-        margin-top: 10px;
-      }
-    </style>
   </head>
   <body>
     <sidebar>
       <questions>
-        <ul class="qul">
+        <ol class="qul">
           <li id="q1" class="q">What is OOP</li>
           <li id="q2" class="q">
             Difference between Class, Structure and Union
           </li>
-        </ul>
+          <li id="q3" class="q">Four pillars off OOP</li>
+          <li id="q4" class="q">
+            Inheritance with implementation and real-world example
+          </li>
+          <li id="q5" class="q">
+            Polymorphism with implementation and real-world example
+          </li>
+          <li id="q6" class="q">
+            Abstraction with implementation and real-world example
+          </li>
+          <li id="q7" class="q">
+            Encapsulation with implementation and real-world example
+          </li>
+          <li id="q8" class="q">
+            Difference between composition and aggregation
+          </li>
+          <li id="q9" class="q">
+            Composition with implementation and real-world example
+          </li>
+          <li id="q10" class="q">
+            Aggregation with implementation and real-world example
+          </li>
+          <li id="q11" class="q">Static v/s dynamic polymorphism</li>
+          <li id="q12" class="q">Types of inheritance with implementation</li>
+          <li id="q13" class="q">Operator overloading</li>
+          <li id="q14" class="q">Access modifiers</li>
+          <li id="q15" class="q">
+            How to call a function of base class from derived class and vice
+            versa
+          </li>
+          <li id="q16" class="q">What is diamond problem</li>
+          <li id="q17" class="q">What is the solution of diamond problem</li>
+          <li id="q18" class="q">Constructor</li>
+          <li id="q19" class="q">Destructor</li>
+          <li id="q20" class="q">
+            If we inherit B from A and C from B in the order of
+            A&minus;&minus;&gt; B&minus;&minus;&gt; C and creates the object of
+            C class, which constructor will be called
+          </li>
+          <li id="q21" class="q">Exception handling</li>
+          <li id="q22" class="q">Overloading & overriding</li>
+          <li id="q23" class="q">
+            Base and Derived class have same named function, how to choose which
+            one to be called
+          </li>
+          <li id="q24" class="q">Memory allocation and deallocation</li>
+          <li id="q25" class="q">If we destroy an object what will happen</li>
+          <li id="q26" class="q">
+            Stack and Heap. Memory allocation and deallocation in both. How data
+            is held on the heap and stack?
+          </li>
+          <li id="q27" class="q">
+            How to delete a class object? What will happen?
+          </li>
+          <li id="q28" class="q">
+            Creating an object directly vs using the keyword new
+          </li>
+          <li id="q29" class="q">Solid principles in OOP</li>
+          <li id="q30" class="q">
+            Can we call the base class without creating an instance?
+          </li>
+          <li id="q31" class="q">Garbage collection</li>
+          <li id="q32" class="q">Dangling pointer</li>
+        </ol>
       </questions>
     </sidebar>
     <answers>
+      <!-- question 1 answer -->
       <div id="a1" class="answer">
         <ul>
           <li>stands for object-oriented programming.</li>
@@ -44,15 +101,911 @@
           </li>
         </ul>
       </div>
+      <!-- question 2 answer -->
       <div id="a2" class="answer">
-        <table>
-            <th>
-                <td>Features</td>
-                <td>Class</td>
-                <td>Structure</td>
-                <td>Union</td>
-            </th>
+        <table style="width: 900px" class="bb1px">
+          <thead style="border: 1px solid black">
+            <th class="bb1px">Features</th>
+            <th class="bb1px">Class</th>
+            <th class="bb1px">Structure</th>
+            <th class="bb1px">Union</th>
+          </thead>
+          <tbody style="border: 1px solid black">
+            <tr>
+              <th class="bb1px">Keyword</th>
+              <td class="bb1px"><code>class</code></td>
+              <td class="bb1px"><code>struct</code></td>
+              <td class="bb1px"><code>union</code></td>
+            </tr>
+            <tr>
+              <th class="bb1px">Default Access specifires</th>
+              <td class="bb1px">Private</td>
+              <td class="bb1px">Public</td>
+              <td class="bb1px">Public</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Members</th>
+              <td class="bb1px">
+                Can have member variables, methods, functions, and
+                constructors/destructors
+              </td>
+              <td class="bb1px">
+                Can have member variables, methods, and constructors/destructors
+              </td>
+              <td class="bb1px">
+                Can have member variables (only one active at a time), methods,
+                and constructors/destructors
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Size</th>
+              <td class="bb1px">
+                Size is the sum of all member sizes (considering padding)
+              </td>
+              <td class="bb1px">
+                Size is the sum of all member sizes (considering padding)
+              </td>
+              <td class="bb1px">Size is the size of the largest member</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Usage</th>
+              <td class="bb1px">
+                Typically used for representing objects with encapsulation and
+                abstraction
+              </td>
+              <td class="bb1px">
+                Typically used for data grouping without much functionality
+              </td>
+              <td class="bb1px">
+                Typically used for memory-efficient storage where only one of
+                the members is used at a time
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Inheritance</th>
+              <td class="bb1px">Supports inheritance</td>
+              <td class="bb1px">Supports inheritance</td>
+              <td class="bb1px">Does not support inheritance</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Memory Allocation</th>
+              <td class="bb1px">Each member has its own storage</td>
+              <td class="bb1px">Each member has its own storage</td>
+              <td class="bb1px">All members share the same memory location</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Inheritance</th>
+              <td class="bb1px">Supports inheritance</td>
+              <td class="bb1px">Supports inheritance</td>
+              <td class="bb1px">Does not support inheritance</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Access Specifiers</th>
+              <td class="bb1px">Can use public, protected, and private</td>
+              <td class="bb1px">Can use public, protected, and private</td>
+              <td class="bb1px">Can use public, protected, and private</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Constructor/Destructor</th>
+              <td class="bb1px">Can have constructors and destructors</td>
+              <td class="bb1px">Can have constructors and destructors</td>
+              <td class="bb1px">
+                Can have constructors and destructors, but care must be taken as
+                only one member can be active at a time
+              </td>
+            </tr>
+          </tbody>
         </table>
+      </div>
+      <!-- question 3 answer -->
+      <div id="a3" class="answer">
+        <h2>Four pillars of OOP</h2>
+        <ul>
+          <li>
+            <b>Polymorphism</b>
+            <ul>
+              <li>It simply means more than one form.</li>
+              <li>
+                The same entity (function or operator) behaves differently in
+                different scenarios.
+              </li>
+              <li>
+                Refers to the ability of objects to take on multiple forms based
+                on their context or usage.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Encapsulation</b>
+            <ul>
+              <li>
+                Defined as the wrapping up of data and information in a single
+                unit.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Abstraction</b>
+            <ul>
+              <li>
+                Means displaying only essential information and hiding the
+                details.
+              </li>
+              <li>
+                Refers to providing only essential information about the data to
+                the outside world, hiding the background details or
+                implementation.
+              </li>
+              <li>
+                Types of Abstraction
+                <ul>
+                  <li>
+                    Data Abstraction -- This type only shows the required
+                    information about the data and hides the unnecessary data.
+                  </li>
+                  <li>
+                    Control Abstraction – this type shows the required
+                    information about the implementation and hides the
+                    unnecessary information
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Inheritance</b>
+            <ul>
+              <li>
+                Inheritance is a method through which one class inherits the
+                properties from its parent class.
+              </li>
+              <li>
+                Inheritance is a mechanism of reusing and extending existing
+                classes without modifying them, thus producing hierarchical
+                relationships between them.
+              </li>
+              <li>
+                it is possible to inherit attributes and methods from one class
+                to another.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- question 4 answer -->
+      <div id="a4" class="answer">
+        <ul>
+          <li>
+            New class (derived class or subclass or child class) is created on
+            the basis of existing class (base class or super class or parent
+            class)
+          </li>
+          <li>
+            Derived class inherits the attributes and methods from the base
+            class
+          </li>
+          <li>Code reusability</li>
+          <li>Creation of hierarchal relationship between classes</li>
+          <li>
+            Consider the real-world example where we have base class `Vehicle`
+          </li>
+          <li>And derived/ inherited classes `Bike` and `Car`</li>
+          <li>
+            All Vehicles have same attributes like `make`, `model` and
+            `displayInfo( )`
+          </li>
+          <li>
+            However bikes and cars have specific attributes like `Car` has doors
+            and windows but `Bike` has’nt
+          </li>
+        </ul>
+        <pre>
+          #include &lt;iostream&gt;
+          #include &lt;string&gt;
+          using namespace std;
+          
+          class Vehicle {
+          protected:
+              string model;
+              string color;
+          
+          public:
+              Vehicle(string model, string color) : model(model), color(color) {}
+          
+              void displayInfo() {
+                  cout &lt;&lt; "Model: " &lt;&lt; model &lt;&lt; " and Color: " &lt;&lt; color;
+              }
+          };
+          
+          class Car : public Vehicle {
+          private:
+              int no_of_doors;
+          
+          public:
+              Car(string model, string color, int doors) : Vehicle(model, color), no_of_doors(doors) {}
+          
+              void displayCarInfo() {
+                  displayInfo();
+                  cout &lt;&lt; " and No. of Doors: " &lt;&lt; no_of_doors &lt;&lt; endl;
+              }
+          };
+          
+          class Bike : public Vehicle {
+          private:
+              bool hasCarrier;
+          
+          public:
+              Bike(string model, string color, int carrier) : Vehicle(model, color), hasCarrier(carrier) {}
+          
+              void displayBikeInfo() {
+                  displayInfo();
+                  cout &lt;&lt; " and " &lt;&lt; (hasCarrier ? "has " : "doesn't have ") &lt;&lt; "a carrier" &lt;&lt; endl;
+              }
+          };
+          
+          int main() {
+              Car car1("Bugatti", "Orange", 2);
+              Bike bike1("Honda", "Black", true);
+              bike1.displayBikeInfo();
+              car1.displayCarInfo();
+              return 0;
+          }
+          </pre
+        >
+      </div>
+      <!-- question 5 answer -->
+      <div id="a5" class="answer">
+        <ul>
+          <li>Simply means more than one forms</li>
+          <li>
+            The same entity (function or operator) behaves differently in
+            different scenarios
+          </li>
+          <li>
+            Refers to the ability of objects to take on multiple forms on their
+            context or usage
+          </li>
+          <li>There are two types of polymorphism</li>
+          <li>
+            Static or Compile time polymorphism
+            <ul>
+              <li>
+                Achieved through function overloading or operator overloading
+              </li>
+            </ul>
+          </li>
+          <li>
+            Dynamic or Runtime polymorphism
+            <ul>
+              <li>Achieved through the overriding/virtual function</li>
+            </ul>
+          </li>
+          <li>
+            Real-world example of different types of shapes in drawing
+            applications
+          </li>
+          <li>
+            We can have different shapes like circles, rectangle, and triangles
+            <ul>
+              <li>All inherited from common base class called `Shape`</li>
+            </ul>
+          </li>
+          <li>
+            Each shape can have its own implementation of a method called `draw(
+            )`
+          </li>
+          <li>Through function overloading</li>
+        </ul>
+        <pre>
+          #include &lt;iostream&gt;
+          using namespace std;
+          
+          class Adder{
+            public:
+            void add(int n1, int n2){
+                cout&lt;&lt;"The sum of two numbers is "&lt;&lt;n1+n2endl;
+            }
+            void add(int n1, int n2, int n3){
+                cout&lt;&lt;"The sum of three integers is "&lt;&lt;n1+n2+n3&lt;&lt;endl;
+            }
+            void add(double n1, double n2){
+                cout&lt;&lt;"The sum of two larger numbers is "&lt;&lt; n1+n2&lt;&lt; endl;
+            }
+          };
+          int main(){
+              Adder math;
+              math.add(2,3,4);
+              math.add(45.8, 8.9);
+              math.add(34,3);
+              return 0;
+          }
+          </pre
+        >
+
+        <ul>
+          <li>Through operator overloading</li>
+        </ul>
+        <pre>
+          #include &lt;iostream&gt;
+          #include &lt;string&gt;
+          using namespace std;
+          
+          class MyOperator {
+          public:
+              int operator+(int a) {
+                  return a;
+              }
+              string operator+(string s) {
+                  return s;
+              }
+          };
+          
+          int main() {
+              MyOperator op;
+              int result1 = op + 5 + 5 +5;
+              cout &lt;&lt; "Result of addition of integers: " &lt;&lt; result1 &lt;&lt; endl;
+              string result2 = op + "Hello, " + "world!";
+              cout &lt;&lt; "Result of concatenation of strings: " &lt;&lt; result2 &lt;&lt;endl;
+              return 0;
+          }
+          </pre
+        >
+
+        <ul>
+          <li>Through overridden method/ virtual functions</li>
+        </ul>
+        <pre>
+          #include &lt;iostream&gt;
+          using namespace std;
+          
+          class Shape{
+            public:
+            virtual void draw(){
+                cout&lt;&lt;"Drawing a shape"&lt;&lt;endl;
+            }
+          };
+          
+          class Circle : public Shape{
+              public:
+              void draw() override{
+                  cout&lt;&lt;"Drawing a circle"&lt;&lt;endl;
+              }
+          };
+          
+          class Rectangle : public Shape{
+              public:
+              void draw() override{
+                  cout&lt;&lt;"Drawing a Rectangle"&lt;&lt;endl;
+              }
+          };
+          
+          class Triangle : public Shape{
+              public:
+              void draw() override{
+                  cout&lt;&lt;"Drawing a Triangle"&lt;&lt;endl;
+              }
+          };
+          
+          int main(){
+              Circle c;
+              Triangle t;
+              Rectangle r;
+              c.draw();
+              t.draw();
+              r.draw();
+              return 0;
+          }
+          </pre
+        >
+      </div>
+      <!-- question 8 answer -->
+      <div id="a8" class="answer">
+        <table class="bb1px">
+          <thead>
+            <th class="bb1px">Composition</th>
+            <th class="bb1px">Aggregation</th>
+          </thead>
+          <tbody>
+            <tr class="bb1px">
+              <td class="bb1px">A composition is a strong relationship</td>
+              <td class="bb1px">An aggregation is a weaker relationship</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">
+                The composer object owns the component object: one class
+                completely contains another class and determines its lifetime.
+              </td>
+              <td class="bb1px">
+                The aggregator has an instance of another class, which
+                determines its own lifetime.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- question 11 answer -->
+      <div id="a11" class="answer">
+        <table class="bb1px">
+          <thead>
+            <th class="bb1px">Static Polymorphism</th>
+            <th class="bb1px">Dynamic Polymorphism</th>
+          </thead>
+          <tbody>
+            <tr class="bb1px">
+              <td class="bb1px">Resolved at compile time</td>
+              <td class="bb1px">Resolved at run time</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">
+                Achieved through function overloading and operator overloading
+              </td>
+              <td class="bb1px">Achieved through inheritance and overriding</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">
+                Faster execution since the method to be called at compile time
+              </td>
+              <td class="bb1px">
+                Slightly lower due to overhead of determining correct method to
+                be called at runtime
+              </td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">
+                Less flexible as the behavior is defined at compile time
+              </td>
+              <td class="bb1px">
+                More flexible as it allows for the behavior to be defined at
+                runtime
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- question 14 answer -->
+
+      <div id="a14" class="answer">
+        <table class="bb1px">
+          <thead>
+            <th class="bb1px">Public</th>
+            <th class="bb1px">Private</th>
+            <th class="bb1px">Protected</th>
+          </thead>
+          <tbody>
+            <tr class="bb1px">
+              <td class="bb1px">By-default in struct and union</td>
+              <td class="bb1px">By-default in class</td>
+              <td class="bb1px">Not used as by-default in any of these</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">Achieved by public keyword</td>
+              <td class="bb1px">Achieved by private keyword</td>
+              <td class="bb1px">Achieved by protected keyword</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">Access everywhere</td>
+              <td class="bb1px">Only friends can access</td>
+              <td class="bb1px">Derived and friends can access</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- question 16 answer -->
+      <div id="a16" class="answer">
+        <ul>
+          <li>Lets consider a scenario</li>
+          <li>There’s one base class inherited two derived classes</li>
+          <li>And most derived class is inherited by two derived classes</li>
+          <li>
+            Now if we try to access the method of most base class through the
+            most derived class
+          </li>
+          <li>Then it has two paths</li>
+          <li>Confusion creates of choosing the path</li>
+          <li>This is called the diamond problem</li>
+          <li>Understand more accurately by this picture illustration</li>
+          <li>
+            Now in this picture, if we try to access the methods of Class A by D
+          </li>
+          <li>Then, it has two paths</li>
+          <li>From D → C → A and D → B → A</li>
+          <li>Then confusion creates</li>
+          <li>Which is called the diamond problem</li>
+        </ul>
+        <img src="../assets/oop/diamondP.PNG" />
+      </div>
+      <!-- question 17 answer -->
+      <div id="a17" class="answer">
+        <ul>
+          <li>Use virtual keyword with the middle classes</li>
+        </ul>
+      </div>
+      <!-- question 20 answer -->
+      <div id="a20" class="answer">
+        <ul>
+          <li>
+            The constructors are called automatically in the order of
+            inheritance from base class to the derived class
+          </li>
+          <li>
+            This ensures that all the necessary base class components are
+            initialized before the derived class components are initialized
+          </li>
+          <li>constructors call in the sequence of A to B to C.</li>
+        </ul>
+      </div>
+      <!-- question 21 answer -->
+      <div id="a21" class="answer">
+        <ul>
+          <li>
+            When executing C++ code, different errors can occur: coding errors
+            made by the programmer, errors due to wrong input, or other
+            unforeseeable things.
+          </li>
+          <li>
+            When an error occurs, C++ will normally stop and generate an error
+            message. The technical term for this is: C++ will throw an exception
+            (throw an error).
+          </li>
+          <li>
+            Exception handling in C++ consists of three keywords: try, throw,
+            and catch
+          </li>
+          <ul>
+            <li>
+              The try statement allows you to define a block of code to be
+              tested for errors while it is being executed.
+            </li>
+            <li>
+              The throw keyword throws an exception when a problem is detected,
+              which lets us create a custom error.
+            </li>
+            <li>
+              The catch statement allows you to define a block of code to be
+              executed if an error occurs in the try block.
+            </li>
+            <li>The try and catch keywords come in pairs:</li>
+          </ul>
+        </ul>
+      </div>
+      <!-- question 22 answer -->
+      <div id="a22" class="answer">
+        <table style="width: 900px" class="bb1px">
+          <thead style="border: 1px solid black">
+            <th class="bb1px">Features</th>
+            <th class="bb1px">Overloading</th>
+            <th class="bb1px">Overriding</th>
+          </thead>
+          <tbody style="border: 1px solid black">
+            <tr>
+              <th class="bb1px">Definitions</th>
+              <td class="bb1px">
+                Refers to defining the multiple methods with the same name but
+                with different parameters within the same class
+              </td>
+              <td class="bb1px">
+                Involves creating the method in the child class with the same
+                name, parameters, and return type as a method in the parent
+                class
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Syntax</th>
+              <td class="bb1px">
+                Overloading is accomplished by changing the number, order, or
+                types of the parameters
+              </td>
+              <td class="bb1px">
+                Overriding is achieved by using the @override annotation in the
+                child class to indicate that the method is intended to override
+                the method from the parent class
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Parameters</th>
+              <td class="bb1px">
+                In overloading, the parameters must differ in terms of their
+                numbers, order, and types
+              </td>
+              <td class="bb1px">
+                In overriding, the parameter must be the same as in the parent
+                method
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Return Type</th>
+              <td class="bb1px">
+                Method overloading does not consider the return type as it is
+                not the differentiating factor
+              </td>
+              <td class="bb1px">
+                In method overriding, the return type of the subclass method
+                must be the same as of the parent class
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Overridden methods</th>
+              <td class="bb1px">
+                Methods are not overridden but rather overloaded, meaning they
+                exist as different entities
+              </td>
+              <td class="bb1px">
+                Child class provides the implementation of methods that already
+                exist in the parent class
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Inheritance</th>
+              <td class="bb1px">
+                Can be performed within the same class, meaning no inheritance
+              </td>
+              <td class="bb1px">
+                Occurs between the parent and the child class, taking advantage
+                of inheritance
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Number of methods</th>
+              <td class="bb1px">
+                Allows the existence of multiple methods with different
+                parameters
+              </td>
+              <td class="bb1px">
+                Only one method with the same name and parameters in the parent
+                and child class
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Static and Non-static Methods</th>
+              <td class="bb1px">Involves both static and non-static methods</td>
+              <td class="bb1px">Applies to only non-static methods</td>
+            </tr>
+            <tr>
+              <th class="bb1px">Polymorpjism type</th>
+              <td class="bb1px">
+                Compile time polymorphism, as the decision of which method to
+                invoke is determined at the compile time
+              </td>
+              <td class="bb1px">
+                Runtime polymorphism as the decision of which method is to
+                invoke is determined at the runtime based on the actual type of
+                the object
+              </td>
+            </tr>
+            <tr>
+              <th class="bb1px">Method resolution</th>
+              <td class="bb1px">
+                Method overloading resolution occurs at compile time and is
+                based on the parameters used to invoke the method.
+              </td>
+              <td class="bb1px">
+                Method overriding resolution, however, occurs at runtime, and
+                the decision is made based on the actual object type and the
+                overridden method's presence in the inheritance hierarchy.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- question 23 answer -->
+      <div id="a23" class="answer">
+        <ul>
+          <li>
+            Object type and scope Resolution
+            <ul>
+              <li>Directly calling the function through a base class object</li>
+              <li>
+                If the function is called on the object of the base class, the
+                base class version of the function is called
+              </li>
+            </ul>
+            <pre>
+              #include &lt;iostream&gt;
+              
+              class Base {
+              public:
+                  void display() {
+                      std::cout &lt;&lt; "Base class display()" &lt;&lt; std::endl;
+                  }
+              };
+              
+              class Derived : public Base {
+              public:
+                  void display() {
+                      std::cout &lt;&lt; "Derived class display()" &lt;&lt; std::endl;
+                  }
+              };
+              
+              int main() {
+                  Base baseObj;
+                  baseObj.display();  // Calls Base::display()
+                  return 0;
+              }
+              </pre
+            >
+            <ul>
+              <li>
+                Directly calling the function through a derived class object
+              </li>
+              <li>
+                If the function is called on the object of the derived class,
+                the derived class version of the function is called
+              </li>
+            </ul>
+            <pre>
+              #include &lt;iostream&gt;
+
+                class Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Base class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                class Derived : public Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Derived class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                int main() {
+                    Derived derivedObj;
+                    derivedObj.display();  // Calls Derived::display()
+                    return 0;
+                }
+                
+            </pre>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Pointer or reference type
+            <ul>
+              <li>Calling the function through base class pointer/reference</li>
+              <li>
+                If the function is called through the pointer/ reference to the
+                base class, and the function is not virtual, the base class
+                version is called
+              </li>
+            </ul>
+            <pre>
+              #include &lt;iostream&gt;
+
+                class Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Base class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                class Derived : public Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Derived class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                int main() {
+                    Derived derivedObj;
+                    Base* basePtr = &and;derivedObj;
+                    basePtr&minus;&gt;display();  // Calls Base::display() because it is non-virtual
+                    return 0;
+                }
+                
+            </pre>
+            <ul>
+              <li>
+                Calling the function through derived class pointer/reference
+              </li>
+              <li>
+                If the function is called through the pointer or reference to
+                the derived class, the derived class version is called
+              </li>
+            </ul>
+            <pre>
+              #include &lt;iostream&gt;
+
+                class Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Base class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                class Derived : public Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Derived class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                int main() {
+                    Derived derivedObj;
+                    Derived* derivedPtr = &and;derivedObj;
+                    derivedPtr&minus;&gt;display();  // Calls Derived::display()
+                    return 0;
+                }                
+            </pre>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Virtual functions and polymorphism
+            <ul>
+              <li>Virtual functions</li>
+              <li>
+                If the function in the base class is declared as the `virtual`
+                then calling the function through pointer/reference to the base
+                class will result in the derived class version being called ( if
+                it overrides the base class version). This is dynamic
+                Polymorphism.
+              </li>
+            </ul>
+            <pre>
+              #include &lt;iostream&gt;
+
+                class Base {
+                public:
+                    virtual void display() {
+                        std::cout &lt;&lt; "Base class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                class Derived : public Base {
+                public:
+                    void display() override {
+                        std::cout &lt;&lt; "Derived class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                int main() {
+                    Derived derivedObj;
+                    Base* basePtr = &and;derivedObj;
+                    basePtr&minus;&gt;display();  // Calls Derived::display() because it is virtual
+                    return 0;
+                }
+                
+            </pre>
+            <ul>
+              <li>Non-virtual functions</li>
+              <li>
+                If the function is not declared as the `virtual` in the base
+                class, then function call through the base class will be
+                resolved at the compile time based on the type of
+                pointer/reference, leading to the base class version being
+                called if the call is made through the base class
+                pointer/reference.
+              </li>
+            </ul>
+            <pre>
+              #include &lt;iostream&gt;
+
+                class Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Base class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                class Derived : public Base {
+                public:
+                    void display() {
+                        std::cout &lt;&lt; "Derived class display()" &lt;&lt; std::endl;
+                    }
+                };
+                
+                int main() {
+                    Derived derivedObj;
+                    Base* basePtr = &and;derivedObj;
+                    basePtr&minus;&gt;display();  // Calls Base::display() because it is non-virtual
+                    return 0;
+                }
+                
+            </pre>
+          </li>
+        </ul>
       </div>
     </answers>
 
