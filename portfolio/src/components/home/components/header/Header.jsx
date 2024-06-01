@@ -4,7 +4,9 @@ import { HLink } from "./components/HLink";
 export const Header = () => {
   return (
     <div className="header">
-      <h3 className="h-title">Portfolio</h3>
+      <h3 className="h-title">
+        Port<span>folio</span>
+      </h3>
       <ul className="h-links">
         <HLink text="Home" link="home" />
         <HLink text="About" link="about" />

@@ -3,7 +3,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Service } from "./components/Service";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+import { faApple } from "@fortawesome/free-brands-svg-icons";
 
 export const Services = () => {
   const responsive = {
@@ -40,42 +41,17 @@ export const Services = () => {
           <Service
             icon={<FontAwesomeIcon icon={faCode} />}
             title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
+            description="Responsive and user-friendly websites"
           />
           <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
+            icon={<FontAwesomeIcon icon={faMobileScreen} />}
+            title="Android Development"
+            description="User-friendly mobile applications like chatting app , social apps and many more"
           />
           <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
-          />
-          <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
-          />
-          <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
-          />
-          <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
-          />
-          <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
-          />
-          <Service
-            icon={<FontAwesomeIcon icon={faCode} />}
-            title="Web Development"
-            description="I've been working with this technology for the past 3 years and having Strong Knowledege about it"
+            icon={<FontAwesomeIcon icon={faApple} />}
+            title="iOS Development"
+            description="User friendly application with us"
           />
         </Carousel>
       </div>

@@ -12,11 +12,11 @@ export const About = () => {
           About <span>Me</span>
         </h1>
         <p className="a-description">
-          A Higher-Order Component (HOC) is a pattern in React that allows you
-          to enhance or extend the behavior of components by wrapping them with
-          a higher-order function. In simple terms, a HOC is a function that
-          takes a component as an input and returns a new component with
-          additional features or behavior.
+          I'm Mern Stack Developer. I've been working with this stack for the
+          past 3 years and have a strong grip on these technologies. In our FYP
+          we chose React Native instead of React, because we have to create a
+          cross-platform application that should be compatible with all
+          plateforms.
         </p>
         <button className="a-read-more-btn">Read More</button>
       </div>

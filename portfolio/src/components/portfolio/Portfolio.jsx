@@ -1,7 +1,7 @@
 // Portfolio.js
 import React from "react";
 import { SProject } from "./components/SProject";
-import rms from "../../assets/projects/rn.png";
+import rms from "../../assets/projects/rms.jpeg";
 
 export const Portfolio = () => {
   return (
@@ -18,7 +18,7 @@ export const Portfolio = () => {
         <SProject
           p_img={rms}
           p_name="Restaurant Management System"
-          link="https://example.com" // Add the appropriate link here
+          link="interview/oop.html" // Add the appropriate link here
         />
         <SProject
           p_img={rms}

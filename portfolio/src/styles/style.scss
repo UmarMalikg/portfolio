@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .app {
   color: $white;
@@ -23,6 +24,9 @@
       @include row_flex(space-between);
       background-color: $dark_black;
       .h-title {
+        span {
+          color: $purple;
+        }
       }
       .h-links {
         @include row_flex(center);
@@ -49,12 +53,31 @@
       @include row_flex(space-between);
       // flex-wrap: wrap;
       .h-details {
+        .h-hello {
+          margin-bottom: 10px;
+        }
+        .h-name {
+          margin-bottom: 7px;
+        }
+        .h-occupation {
+          margin-bottom: 12px;
+          span {
+            color: $purple;
+          }
+        }
+        .h-about {
+          margin-bottom: 20px;
+        }
         .h-social-links {
           .social-link {
             color: inherit;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 25px;
             margin: 0 20px 0 0;
+            padding: 5px;
+            &:hover {
+              color: $purple;
+            }
           }
         }
         .h-buttons {
@@ -102,11 +125,13 @@
       flex-direction: 1;
       margin-left: 50px;
       .a-title {
+        margin-bottom: 20px;
         span {
           color: $purple;
         }
       }
       .a-read-more-btn {
+        margin-top: 20px;
         @include btn;
       }
     }
@@ -184,6 +209,7 @@
         }
         .p-hover {
           position: absolute;
+          background-color: $purple;
           bottom: -100%; /* Start hidden below */
           left: 0;
           right: 0;
@@ -210,6 +236,7 @@
           .p-hover {
             bottom: 0;
             color: $white;
+            background-color: $purple;
           }
         }
       }

@@ -17,13 +17,13 @@ export const Home = () => {
       <Header />
       <div className="home-content">
         <div className="h-details h-item">
-          <h3>Hello, it's Me</h3>
-          <h1>Muhammad Umar</h1>
-          <h3>And I'm a MERN Stack Developr</h3>
-          <p>
-            dfjlajdfldlfjldfjlj dflafkhlkjhghgkljah sldkfjhsldkjfhklasdhfk
-            ljshdflkhsaldkfhalksdhf klsdhflkashfldfljlaskdj flakjdflkjasdlfk
-            jldksjdhflksdj hflahdfklsd jhflkajsd
+          <h3 className="h-hello">Hello, it's Me</h3>
+          <h1 className="h-name">Muhammad Umar</h1>
+          <h3 className="h-occupation">
+            And I'm a <span>MERN Stack Developr</span>
+          </h3>
+          <p className="h-about">
+            I've been working with this technology for the past 3 years.
           </p>
           <div className="h-social-links">
             <SocialLink

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add some basic styling for visibility */
+      .answer {
+        display: none; /* Hide answers by default */
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <sidebar>
+      <questions>
+        <ul class="qul">
+          <li id="q1" class="q">What is OOP</li>
+          <li id="q2" class="q">
+            Difference between Class, Structure and Union
+          </li>
+        </ul>
+      </questions>
+    </sidebar>
+    <answers>
+      <div id="a1" class="answer">
+        <ul>
+          <li>stands for object-oriented programming.</li>
+          <li>
+            A programming model that organizes the software design around data
+            and objects rather than the functions and logics
+          </li>
+          <li>
+            focuses on the objects that developers want to manipulate rather
+            that the logic required to manipulate
+          </li>
+          <li>
+            Real-world examples of OOP concepts include objects such as a car, a
+            person, and a bank account. These objects have properties (e.g. a
+            car has a make, model, and color) and methods (e.g. a car can start,
+            stop, and drive).
+          </li>
+        </ul>
+      </div>
+      <div id="a2" class="answer">
+        <table>
+            <th>
+                <td>Features</td>
+                <td>Class</td>
+                <td>Structure</td>
+                <td>Union</td>
+            </th>
+        </table>
+      </div>
+    </answers>
+
+    <script src="script.js"></script>
+  </body>
+</html>

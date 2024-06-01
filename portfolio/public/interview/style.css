@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 300px;
+  background-color: black;
+  padding: 20px;
+}
+.qul {
+  list-style: none;
+}
+.q {
+  color: white;
+  cursor: pointer;
+}
+.q {
+  margin: 10px 0;
+}
+
+answers {
+  position: fixed;
+  left: 300px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  padding: 20px;
+}
+.answer {
+  display: none; /* Hide answers by default */
+  margin-top: 10px;
+}
