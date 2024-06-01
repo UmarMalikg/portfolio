@@ -41,17 +41,17 @@ export const Services = () => {
           <Service
             icon={<FontAwesomeIcon icon={faCode} />}
             title="Web Development"
-            description="Responsive and user-friendly websites"
+            description="Crafting responsive and user-friendly websites to enhance digital experiences. Employing cutting-edge web development techniques to create dynamic online solutions."
           />
           <Service
             icon={<FontAwesomeIcon icon={faMobileScreen} />}
             title="Android Development"
-            description="User-friendly mobile applications like chatting app , social apps and many more"
+            description="Creating intuitive mobile applications, such as chat and social networking apps, to enhance the Android experience with innovation and user-centric design."
           />
           <Service
             icon={<FontAwesomeIcon icon={faApple} />}
             title="iOS Development"
-            description="User friendly application with us"
+            description="Creating elegant iOS apps with precision and user-centric design to enhance experience. Leveraging advanced techniques for seamless mobile solutions."
           />
         </Carousel>
       </div>

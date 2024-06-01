@@ -27,7 +27,8 @@ export const Home = () => {
             And I'm a <span>MERN Stack Developr</span>
           </h3>
           <p className="h-about">
-            I've been working with this technology for the past 3 years.
+            I've been working with this technology for the past 3 years. You can
+            find my CV below for more details.
           </p>
           <div className="h-social-links">
             <SocialLink
@@ -39,7 +40,7 @@ export const Home = () => {
               icon={<FontAwesomeIcon icon={faTwitter} />}
             />
             <SocialLink
-              link="https://www.linkedin.com"
+              link="https://www.example.com"
               icon={<FontAwesomeIcon icon={faInstagram} />}
             />
             <SocialLink

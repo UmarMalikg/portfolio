@@ -3,8 +3,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { CareerSub } from "./components/CareerSub";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
-import { faApple } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCode,
+  faSitemap,
+  faDatabase,
+} from "@fortawesome/free-solid-svg-icons";
+import { faReact, faJs } from "@fortawesome/free-brands-svg-icons";
 
 export const CareerPrep = () => {
   const responsive = {
@@ -45,25 +49,28 @@ export const CareerPrep = () => {
             link={`interview/oop.html`}
           />
           <CareerSub
-            icon={<FontAwesomeIcon icon={faMobileScreen} />}
+            icon={<FontAwesomeIcon icon={faSitemap} />}
             title="DSA"
             description="Learn DSA Concepts with us to crack the top tech interviews"
+            link={`interview/dsa.html`}
           />
           <CareerSub
-            icon={<FontAwesomeIcon icon={faApple} />}
+            icon={<FontAwesomeIcon icon={faDatabase} />}
             title="SQL"
             description="Learn SQL Concepts with us to crack the top tech interviews"
+            link={`interview/sql.html`}
           />
           <CareerSub
-            icon={<FontAwesomeIcon icon={faApple} />}
+            icon={<FontAwesomeIcon icon={faJs} />}
             title="JavaScript"
             description="Learn JavaScript Concepts with us to crack the top tech interviews"
             link={`interview/js.html`}
           />
           <CareerSub
-            icon={<FontAwesomeIcon icon={faApple} />}
+            icon={<FontAwesomeIcon icon={faReact} />}
             title="Reactjs"
             description="Learn Reactjs Concepts with us to crack the top tech interviews"
+            link={`interview/react.html`}
           />
         </Carousel>
       </div>

@@ -234,7 +234,7 @@
           .p-hover {
             bottom: 0;
             color: $white;
-            background-color: $purple;
+            background-color: $dark_black;
           }
         }
       }
@@ -295,14 +295,15 @@
   //   for footer
   .footer {
     background-color: $dark_black;
-    padding: 100px;
+    padding: 30px;
+    text-align: center;
   }
 
   .go-home {
     position: fixed;
     z-index: 100;
-    bottom: 30px;
-    right: 30px;
+    bottom: 12px;
+    right: 20px;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
