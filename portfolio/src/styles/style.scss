@@ -41,6 +41,7 @@
           font-weight: bold;
           &:hover {
             color: $purple;
+            box-shadow: 0 0 10px 3px $purple_shaddow;
           }
         }
       }
@@ -96,9 +97,7 @@
       .h-dp-section {
         .h-dp-holder {
           .h-dp {
-            height: 300px;
-            width: 300px;
-            object-fit: cover;
+            @include dp;
           }
         }
       }
@@ -114,9 +113,7 @@
     .a-dp-section {
       .a-dp-holder {
         .a-dp {
-          height: 300px;
-          width: 300px;
-          object-fit: cover;
+          @include dp;
         }
       }
     }
@@ -164,6 +161,7 @@
           padding: 20px 0 10px 0;
         }
         h2 {
+          color: inherit;
         }
         p {
           margin: 30px 0;
@@ -245,7 +243,7 @@
 
   //for contacts
   .contact {
-    background-color: $dark_black;
+    background-color: $light_black;
     height: 100vh;
     .c-title {
       text-align: center;
@@ -268,7 +266,7 @@
           @include row_flex(space-between);
           flex-wrap: wrap;
           input {
-            background-color: $light_black;
+            background-color: $dark_black;
             padding: 8px;
             width: 47%;
             font-size: 18px;
@@ -296,7 +294,27 @@
 
   //   for footer
   .footer {
-    background-color: $light_black;
+    background-color: $dark_black;
     padding: 100px;
+  }
+
+  .go-home {
+    position: fixed;
+    z-index: 100;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    background-color: $purple;
+    cursor: pointer;
+    display: block;
+
+    &.hidden {
+      display: none;
+    }
   }
 }

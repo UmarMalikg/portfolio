@@ -12,6 +12,10 @@ import { SocialLink } from "./components/header/components/SocialLink";
 import { HomeDp } from "./components/HomeDp";
 
 export const Home = () => {
+  const cvUrl = "Umar_CV.pdf";
+  const handleDownload = () => {
+    window.open(cvUrl, "_blank");
+  };
   return (
     <div className="home" id="home">
       <Header />
@@ -48,7 +52,9 @@ export const Home = () => {
             />
           </div>
           <div className="h-buttons">
-            <button className="cv-btn">Download CV</button>
+            <button className="cv-btn" onClick={handleDownload}>
+              Download CV
+            </button>
             <button className="hire-btn">Hire me</button>
           </div>
         </div>
