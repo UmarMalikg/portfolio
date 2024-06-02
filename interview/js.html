@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers--JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <sidebar>
+      <questions>
+        <ol class="qul">
+          <li id="q1" class="q">
+            What is JavaScript? Describe its Characteristics.
+          </li>
+          <li id="q2" class="q">Difference between Java and JavaScript</li>
+          <li id="q3" class="q">JavaScript Hoisting Concept</li>
+          <li id="q4" class="q">Difference between `null` and `undefined`</li>
+          <li id="q5" class="q">
+            Difference between synchronous and asynchronous
+          </li>
+          <li id="q6" class="q">How to handle errors in JavaScript?</li>
+          <li id="q7" class="q">Callback function</li>
+          <li id="q8" class="q">Promises</li>
+          <li id="q9" class="q">Arrow function</li>
+          <li id="q10" class="q">Difference between `==` & `===`</li>
+          <li id="q11" class="q">CORS</li>
+          <li id="q12" class="q">`this` keyword</li>
+          <li id="q13" class="q">
+            Difference between `var`, `let` and `const`
+          </li>
+        </ol>
+      </questions>
+    </sidebar>
+    <answers>
+      <!-- question 1 answer -->
+      <div id="a1" class="answer">
+        <ul>
+          <li>Interpreted High-level Language</li>
+          <li>Primarily used for the client side web development</li>
+          <li>Event-driven language</li>
+          <li>Weakly-typed language</li>
+          <li>Versatile</li>
+        </ul>
+      </div>
+      <!-- question 2 answer -->
+      <div id="a2" class="answer">
+        <ul>
+          <li>
+            Type
+            <ul>
+              <li>Java is Statically-Typed</li>
+              <li>JavaScript is dynamically-typed</li>
+            </ul>
+          </li>
+          <li>
+            Compiled vs Interpreter
+            <ul>
+              <li>Java is Compiled Language</li>
+              <li>JavaScript is Interpreted Language</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- question 3 answer -->
+      <div id="a3" class="answer">
+        <ul>
+          <li>
+            Means you can use variable before it’s declared in the code, but its
+            value is <code>undefined</code> until it assigns the value
+          </li>
+          <li>Only the declaration is hoisted, not the initialization</li>
+        </ul>
+      </div>
+      <!-- question 4 answer -->
+      <div id="a4" class="answer">
+        <ul>
+          <li>
+            Null &rarr; Special value that indicates that a variable is
+            intentionally does not have value assigned to it
+          </li>
+          <li>
+            Undefined &rarr; Represents that variable has been declared but not
+            been assigned the value, or object property does not exist
+          </li>
+        </ul>
+      </div>
+      <!-- question 5 answer -->
+      <div id="a5" class="answer">
+        <table style="width: 900px" class="bb1px">
+          <thead style="border: 1px solid black">
+            <tr>
+              <th class="bb1px">Synchronous</th>
+              <th class="bb1px">Asynchronous</th>
+            </tr>
+          </thead>
+          <tbody style="border: 1px solid black">
+            <tr>
+              <td class="bb1px">Sequential execution</td>
+              <td class="bb1px">Concurrent execution</td>
+            </tr>
+            <tr>
+              <td class="bb1px">Block the execution step</td>
+              <td class="bb1px">
+                Does not block the execution step, except we use callback,
+                promises, or async/await
+              </td>
+            </tr>
+            <tr>
+              <td class="bb1px">This can lead to performance issues</td>
+              <td class="bb1px">This approach improves performance</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>JavaScript is synchronous</li>
+          <li>Means, it executes operations sequentially</li>
+          <li>
+            However, it handles asynchronous operations through event-driven
+            architecture
+          </li>
+        </ul>
+      </div>
+      <!-- question 6 answer -->
+      <div id="a6" class="answer">
+        <ul>
+          <li>Through try catch block</li>
+        </ul>
+      </div>
+      <!-- question 7 answer -->
+      <div id="a7" class="answer">
+        <ul>
+          <li>JavaScript is synchronous</li>
+          <li>Means, it executes operations sequentially</li>
+          <li>
+            However, it handles asynchronous operations through event-driven
+            architecture
+          </li>
+        </ul>
+        <pre>
+    function greet(name, callback) {
+        console.log('Hello, ' + name + '!');
+        callback();
+    }
+    
+    function sayGoodbye() {
+        console.log('Goodbye!');
+    }
+    
+    greet('Alice', sayGoodbye);    
+</pre
+        >
+      </div>
+      <!-- question 8 answer -->
+      <div id="a8" class="answer">
+        <ul>
+          <li>Represents the eventual completion (failure) of an operation</li>
+          <li>
+            More convenient way than callback to handle asynchronous operations
+          </li>
+          <li>
+            It can be in one of three states:
+            <ul>
+              <li>Pending</li>
+              <li>Fulfilled</li>
+              <li>Rejected</li>
+            </ul>
+          </li>
+        </ul>
+        <pre>
+            myPromise
+    .then((result) => {
+        console.log(result); // Output: Operation completed successfully
+    })
+    .catch((error) => {
+        console.error(error);
+    })
+    .finally(() => {
+        console.log('Cleanup actions if necessary');
+    });
+
+        </pre>
+      </div>
+      <!-- question 9 answer -->
+      <div id="a9" class="answer">
+        <ul>
+          <li>Introduced in ECMAScript 6 (ES6)</li>
+          <li>Provides a concise syntax for writing function</li>
+          <li>
+            Especially differs in how to handle the <code>this</code> keyword
+          </li>
+          <li><code>this</code> for arrow function</li>
+        </ul>
+        <pre>
+            const obj = {
+                value: 42,
+                method: () => {
+                    console.log(this.value); // `this` is not `obj`, it's the global object or undefined
+                }
+            };
+            
+            obj.method(); // Output: undefined
+            
+        </pre>
+        <ul>
+          <li>`this` for default function</li>
+        </ul>
+        <pre>
+            const obj = {
+                value: 42,
+                method: function() {
+                    console.log(this.value); // `this` refers to `obj`
+                }
+            };
+            
+            obj.method(); // Output: 42
+            
+        </pre>
+      </div>
+      <!-- question 10 answer -->
+      <div id="a10" class="answer">
+        <table class="bb1px" style="width: 900px">
+          <thead class="bb1px">
+            <tr class="bb1px">
+              <th class="bb1px">==</th>
+              <th class="bb1px">===</th>
+            </tr>
+          </thead>
+          <tbody class="bb1px">
+            <tr class="bb1px">
+              <td class="bb1px">equality</td>
+              <td class="bb1px">Strict equality</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">It does not check the type</td>
+              <td class="bb1px">It checks the type too</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log(2 == '2'); // true</td>
+              <td class="bb1px">console.log(2 == '2'); // false</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log(true == 1); // true</td>
+              <td class="bb1px">console.log(true == 1); // false</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log(false == 0); // true</td>
+              <td class="bb1px">console.log(false == 0); // false</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log(null == undefined); // true</td>
+              <td class="bb1px">console.log(null == undefined); // false</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log([] == ''); // true</td>
+              <td class="bb1px">console.log([] == ''); // false</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log([] == 0); // true</td>
+              <td class="bb1px">console.log([] == 0); // false</td>
+            </tr>
+            <tr class="bb1px">
+              <td class="bb1px">console.log([1] == '1'); // true</td>
+              <td class="bb1px">console.log([1] == '1'); // false</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- question 11 answer -->
+      <div id="a11" class="answer">
+        <ul>
+          <li>Cross-Origin Resource Sharing</li>
+          <li>Used to control the requests from different domains</li>
+          <li>Used to restrict the web pages from different domains</li>
+        </ul>
+      </div>
+      <!-- question 12 answer -->
+      <div id="a12" class="answer">
+        <ul>
+          <li>Refers to the context in which the function is executed</li>
+        </ul>
+      </div>
+      <!-- question 13 answer -->
+      <div id="a13" class="answer">
+        <table class="bb1px" style="width: 700px">
+          <thead>
+            <tr>
+              <th class="bb1px">Features</th>
+              <th class="bb1px">let</th>
+              <th class="bb1px">var</th>
+              <th class="bb1px">const</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="bb1px">Scope</td>
+              <td class="bb1px">Block-Scope</td>
+              <td class="bb1px">Function-scope</td>
+              <td class="bb1px">Block-scope</td>
+            </tr>
+            <tr>
+              <td class="bb1px">Hoisting</td>
+              <td class="bb1px">Hoisted but not initialized (TDZ)</td>
+              <td class="bb1px">Hoisted and initialized with `undefined`</td>
+              <td class="bb1px">Hoisted but not initialized (TDZ)</td>
+            </tr>
+            <tr>
+              <td class="bb1px">Re-declaration</td>
+              <td class="bb1px">Not allowed</td>
+              <td class="bb1px">Allowed</td>
+              <td class="bb1px">Not allowed</td>
+            </tr>
+            <tr>
+              <td class="bb1px">Initialization</td>
+              <td class="bb1px">Optional</td>
+              <td class="bb1px">Optional</td>
+              <td class="bb1px">Mandatory at declaration</td>
+            </tr>
+            <tr>
+              <td class="bb1px">Re-assignment</td>
+              <td class="bb1px">Allowed</td>
+              <td class="bb1px">Allowed</td>
+              <td class="bb1px">Not allowed</td>
+            </tr>
+            <tr>
+              <td class="bb1px">Global object</td>
+              <td class="bb1px">Does not become property of global object</td>
+              <td class="bb1px">
+                Becomes property of global object (in global scope)
+              </td>
+              <td class="bb1px">Does not become property of global object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </answers>
+
+    <script src="script.js"></script>
+  </body>
+</html>

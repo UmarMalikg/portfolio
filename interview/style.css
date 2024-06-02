@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 300px;
+  background-color: black;
+  padding: 20px;
+}
+.qul {
+  margin-left: 10px;
+}
+.q {
+  color: white;
+  cursor: pointer;
+}
+.q {
+  margin: 10px 0;
+}
+
+answers {
+  position: fixed;
+  left: 300px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  padding: 20px;
+  overflow: auto;
+}
+.answer {
+  display: none;
+  margin-top: 10px;
+}
+.answer ul {
+  list-style: inherit;
+}
+
+/* common stylign */
+.bb1px {
+  border: 1px solid black;
+}
+ul ul {
+  margin-left: 30px;
+  list-style-type: circle !important;
+}
+ul ul ul {
+  margin-left: 60px;
+  list-style-type: square !important;
+}
+ul ul ul ul {
+  margin-left: 90px;
+  list-style-type: disc !important;
+}
+pre {
+  background-color: black;
+  color: white;
+}
